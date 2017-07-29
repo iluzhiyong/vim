@@ -115,9 +115,9 @@ filetype plugin indent on
 " <<<<
 
 " 配色方案
-set background=dark
+"set background=dark
 "colorscheme solarized
-colorscheme molokai
+"colorscheme molokai
 "colorscheme phd
 
 " >>
