@@ -108,6 +108,7 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'suan/vim-instant-markdown'
 Plugin 'lilydjwg/fcitx.vim'
 Plugin 'vim-scripts/cscope.vim'
+Plugin 'vim-scripts/taglist.vim'
 
 " 插件列表结束
 call vundle#end()
@@ -115,9 +116,9 @@ filetype plugin indent on
 " <<<<
 
 " 配色方案
-"set background=dark
+set background=dark
 "colorscheme solarized
-"colorscheme molokai
+colorscheme molokai
 "colorscheme phd
 
 " >>
@@ -172,9 +173,11 @@ set hlsearch
 " 其他美化
 
 " 设置 gvim 显示字体
-set guifont=YaHei\ Consolas\ Hybrid\ 10.5
+"set guifont=Monospace\ Monospace\ Monospace\ 16
+"set guifont=YaHei\ Consolas\ Hybrid\ 16
+set guifont=Monospace\ 16
 
-" 禁止折行
+"禁止折行
 set nowrap
 
 " 设置状态栏主题风格
@@ -551,4 +554,30 @@ elseif $CSCOPE_DB  != ""
     cs add $CSCOPE_DB
 endif
 
-
+"---------------------------------------------"
+"
+"   " Tag List 环境设置
+"
+"---------------------------------------------"
+filetype on                     "vim filetype on
+nmap <F7> :TlistToggle<CR>      
+let Tlist_Ctags_Cmd="/usr/bin/ctags"
+"ctags程序位置
+"
+let Tlist_Inc_Winwidth=0
+"window width change off
+"
+let Tlist_Exit_OnlyWindow=0
+"tag/file完成选择时taglist
+"window close=off
+"
+"let Tlist_Auto_Open=0
+"vim 开始时window
+"open=off
+"
+"let Tlist_Use_Right_Window=1
+"vim
+"开始时window
+"open=off
+"
+"                                  
